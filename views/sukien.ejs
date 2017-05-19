@@ -32,6 +32,9 @@
       .update{
         margin-top: 100px;
       }
+      .sukienmoi{
+        margin-left: 500px;
+      }
   </style>
   
   <body ng-controller="MyController">
@@ -58,15 +61,19 @@
     <section class="update">
             <h1>Update Su kien </h1>
           
-          <div class="list-messages" id="listMessages">
+          <!-- <div class="list-messages" id="listMessages">
             <ul>
+
               <li ng-repeat="sukien in sukien1s">
-                <em>{{sukien}}</em>
+                    
+                    <li ng-repeat="sk in sukien">
+                        <em>{{sk}}</em>
+                    </li>
               </li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="new-message" id="newMessage">
+          <div class="sukienmoi" id="">
                 <div class="form-group">
                     <label>Nha</label>
                     <input type="text" ng-model="nha" placeholder="Nha">
@@ -91,13 +98,7 @@
                     <label>Title</label>
                     <input type="text" ng-model="title"  placeholder="title">
                 </div>
-            
-            
-            
-            
-            
-            
-            <input type="button" name="" ng-click= "addSukien()">Submit
+            <input type="button" name="" ng-click= "addSukien()" value = "Submit">
           </div>    
   </section>
   </body>

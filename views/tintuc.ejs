@@ -32,6 +32,9 @@
       .update{
         margin-top: 100px;
       }
+      .tintucmoi{
+        margin-left: 500px;
+      }
   </style>
   
   <body ng-controller="MyController">
@@ -58,15 +61,15 @@
     <section class="update">
           <h1>Update tin tuc </h1>
   
-          <div class="list-messages" id="listMessages">
+         <!--  <div class="list-messages" id="listMessages">
             <ul>
               <li ng-repeat="tintuc in tintuc1s">
                 <em>{{tintuc}}</em>
               </li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="new-message" id="newMessage">
+          <div class="tintucmoi" id="" >
                 <div class="form-group">
                     <label>Vien</label>
                     <input type="text" ng-model="vien" placeholder="Vien">
@@ -91,7 +94,7 @@
                     <label>Title</label>
                     <input type="text" ng-model="title"  placeholder="title">
                 </div>
-            <input type="button" name="" ng-click= "addTintuc()">Submit
+            <input type="button" name="" ng-click= "addTintuc()" value = "Submit">
           </div>    
     </section>
   

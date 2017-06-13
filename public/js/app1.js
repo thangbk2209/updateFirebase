@@ -5,8 +5,27 @@ var ref1 = new Firebase(link1);
 
 
 function MyController($scope, $firebase) {
-		$scope.tintuc1s = $firebase(ref1);
-	  
+		$scope.tintuc1s = $firebase(ref1); 
+	  $scope.chonVien =  function(){
+	  		  var vien = $scope.vien;
+	          console.log(vien);
+	          var link = "https://devpro-firebase-c5b6a.firebaseio.com/TinTuc/"+vien;
+			  console.log(link)
+			  var ref = new Firebase(link);
+			  
+			  $scope.tintucs = $firebase(ref);
+	  }
+	   $scope.xoa = function(){
+	  	 	  var vien = $scope.vien;
+	          console.log(vien);
+	          var link = "https://devpro-firebase-c5b6a.firebaseio.com/TinTuc/"+vien ;
+			  console.log(link)
+			  var ref = new Firebase(link);
+	  		  ref.remove(function(error) {
+			    alert(error ? "Uh oh!" : "Success!");
+			  });
+			   $scope.tintucs = $firebase(ref);
+	  }
 	  $scope.addTintuc = function() {
 	          // if (e.keyCode != 13) return;
 	          var vien = $scope.vien;
